@@ -1,0 +1,39 @@
+# # Please enter the URL of the YouTube video
+url = input("Please enter the URL of the YouTube video: ")
+# # Please enter the URL of the YouTube video
+url = input("Please enter the URL of the YouTube video: ")
+
+# Create a YouTube object
+yt = YouTube(url)
+
+# Display video title and available streams
+print("Video Title: ", yt.title)
+print("Available Streams:")
+for stream in yt.streams.filter(progressive=True, file_extension="mp4"):
+    print(stream)
+
+# Select the stream to download
+itag = input("Please enter the itag value of the stream you want to download: ")
+selected_stream = yt.streams.get_by_itag(itag)
+
+# Start downloading
+print("Starting download...")
+selected_stream.download()
+print("Download completed!")
+# Create a YouTube object
+yt = YouTube(url)
+
+# Display video title and available streams
+print("Video Title: ", yt.title)
+print("Available Streams:")
+for stream in yt.streams.filter(progressive=True, file_extension="mp4"):
+    print(stream)
+
+# Select the stream to download
+itag = input("Please enter the itag value of the stream you want to download: ")
+selected_stream = yt.streams.get_by_itag(itag)
+
+# Start downloading
+print("Starting download...")
+selected_stream.download()
+print("Download completed!")
