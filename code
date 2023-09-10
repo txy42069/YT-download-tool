@@ -33,7 +33,7 @@ for stream in yt.streams.filter(progressive=True, file_extension="mp4"):
 itag = input("Please enter the itag value of the stream you want to download: ")
 selected_stream = yt.streams.get_by_itag(itag)
 
-# Start downloading
+# Start download 
 print("Starting download...")
 selected_stream.download()
 print("Download completed!")
